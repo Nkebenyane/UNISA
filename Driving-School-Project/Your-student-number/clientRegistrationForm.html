@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Client Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./StyleSheet/styles.css">
+    <style>
+        body {
+            background-color: #f1f1f1;
+        }
+
+        .section1 {
+            text-align: center;
+            display: table;
+            width: 100%;
+        }
+
+        .section1 .shtext {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .section1 .seperator {
+            border-bottom: 1px solid #a2a2a2;
+            width: 35px;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .section1 h1 {
+            font-size: 40px;
+            color: #cb376a;
+            font-weight: normal;
+        }
+
+        main {
+            width: 50%;
+        }
+
+        .container {
+            margin: auto;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+            padding: 35px;
+            background-color: #fff;
+
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-content {
+                display: none;
+            }
+
+            .desktop {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="./images/logo.jpg" alt="Brooklyn Driving School Logo" class="logo-image">
+            </div>
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="clientRegistrationForm.html">Register</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="innerwrap">
+            <section class="section1 clearfix">
+                <div class="textcenter">
+                    <span class="shtext">Register</span>
+                    <span class="seperator"></span>
+                    <h1>Drop Us a Mail</h1>
+                </div>
+            </section>
+            <form action="#" method="post">
+                <label for="preferred-name">Preferred Name:</label>
+                <input type="text" id="preferred-name" name="preferred-name" required>
+
+                <label for="full-name">Client Full Names as on ID:</label>
+                <input type="text" id="full-name" name="full-name" required>
+
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+
+                <label for="id-number">ID Number:</label>
+                <input type="text" id="id-number" name="id-number" required>
+
+                <label for="telephone-work">Telephone Work:</label>
+                <input type="tel" id="telephone-work" name="telephone-work" required>
+
+                <label for="cellphone-number">Cellphone Number:</label>
+                <input type="tel" id="cellphone-number" name="cellphone-number" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="home-address">Home address:</label>
+                <textarea id="home-address" name="home-address" required></textarea>
+
+                <label for="postal-address">Postal address (copy from home address if same):</label>
+                <textarea id="postal-address" name="postal-address" required></textarea>
+
+                <label for="learners-license">Do you have a valid learners license?</label>
+                <select id="learners-license" name="learners-license" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="learners-license-expiry">Learners License expiry date (not compulsory):</label>
+                <input type="date" id="learners-license-expiry" name="learners-license-expiry">
+
+                <label for="parents-contact">If you are a minor, please supply parents contact number and names:</label>
+                <textarea id="parents-contact" name="parents-contact"></textarea>
+
+                <label for="lessons-required">Number of lessons required (list lesson packages with prices):</label>
+                <textarea id="lessons-required" name="lessons-required" required></textarea>
+
+                <label for="study-material">Study material (checkbox, tests, etc with prices):</label>
+                <div>
+                    <input type="checkbox" id="study-material1" name="study-material1">
+                    <label for="study-material1">Study Material 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="study-material2" name="study-material2">
+                    <label for="study-material2">Study Material 2</label>
+                </div>
+                <!-- Add more study material checkboxes as needed -->
+
+                <label for="credit-card-name">Name on credit card:</label>
+                <input type="text" id="credit-card-name" name="credit-card-name" required>
+
+                <label for="credit-card-type">Credit card type:</label>
+                <select id="credit-card-type" name="credit-card-type" required>
+                    <option value="">Select</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+
+                <label for="credit-card-number">Credit card number:</label>
+                <input type="text" id="credit-card-number" name="credit-card-number" required>
+
+                <label for="expiration-month-year">Expiration month/year:</label>
+                <input type="month" id="expiration-month-year" name="expiration-month-year" required>
+
+                <label for="cvc-number">CVC number:</label>
+                <input type="text" id="cvc-number" name="cvc-number" required>
+
+                <label for="username">User name:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="password-confirmation">Password confirmation:</label>
+                <input type="password" id="password-confirmation" name="password-confirmation" required>
+
+                <label for="additional-info">Additional information:</label>
+                <textarea id="additional-info" name="additional-info"></textarea>
+
+                <label for="email-address">Email Address:</label>
+                <input type="email" id="email-address" name="email-address" required>
+
+                <label for="telephone-number">Telephone Number:</label>
+                <input type="tel" id="telephone-number" name="telephone-number" required>
+
+                <label for="study-material-interest">Interested in study material:</label>
+                <div>
+                    <input type="checkbox" id="study-material-interest1" name="study-material-interest1">
+                    <label for="study-material-interest1">Study Material 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="study-material-interest2" name="study-material-interest2">
+                    <label for="study-material-interest2">Study Material 2</label>
+                </div>
+                <!-- Add more study material interest checkboxes as needed -->
+
+                <label for="copy-postal-address">Copy postal address:</label>
+                <input type="checkbox" id="copy-postal-address" name="copy-postal-address">
+
+                <label for="credit-card-type-select">Type of credit card:</label>
+                <select id="credit-card-type-select" name="credit-card-type-select" required>
+                    <option value="">Select</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+
+                <label for="question">Questions or Comments:</label>
+                <textarea id="question" name="question"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 Brooklyn Driving School</p>
+        <p class="tel-link">Phone: <a href="tel:+1555555555">&#9742; (555) 555-5555</a></p>
+        <p class="email-link">Email: <a href="mailto:info@brooklyndrivingschool.com">&#9993;
+                info@brooklyndrivingschool.com</a></p>
+    </footer>
+</body>
+
+</html>

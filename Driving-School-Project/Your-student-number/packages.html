@@ -3,48 +3,188 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Brooklyn Driving School - Packages</title>
+    <title>Brooklyn Driving School</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
     <!-- CSS -->
-    <link rel="stylesheet" href="./StyleSheet/style.css">
+    <link rel="stylesheet" href="./StyleSheet/styles.css">
+    <style>
+        body {
+            background-color: #f1f1f1;
+        }
+
+        .section1 {
+            text-align: center;
+            display: table;
+            width: 100%;
+        }
+
+        .section1 .shtext {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .section1 .seperator {
+            border-bottom: 1px solid #a2a2a2;
+            width: 35px;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .section1 h1 {
+            font-size: 40px;
+            color: #cb376a;
+            font-weight: normal;
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+
+        /* Style the video section */
+        main section video {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+
+        /* Style the video captions */
+        main section video::cue {
+            font-size: 14px;
+            background-color: #000;
+            color: #fff;
+            padding: 4px 8px;
+        }
+
+        /* Style the Natis booking link */
+        .main section a.external-link::before {
+            content: "\f08c";
+            font-family: FontAwesome;
+            margin-right: 5px;
+        }
+
+        /* Mobile view adjustments */
+        @media (max-width: 768px) {
+            main section video {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Brooklyn Driving School</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Packages</a></li>
-                <li><a href="#">Registration</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="logo">
+                <img src="./images/logo.jpg" alt="Brooklyn Driving School Logo" class="logo-image">
+            </div>
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="clientRegistrationForm.html">Register</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
-    <main class="grid">
-        <article>
-            <img src="package1.jpg" alt="Package 1" class="round">
-            <h3>Package 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat euismod eros nec congue.</p>
-            <ul>
-                <li>Lesson 1</li>
-                <li>Lesson 2</li>
-                <li>Lesson 3</li>
-                <!-- Add more lessons -->
-            </ul>
-        </article>
-        <!-- Add more articles for other packages -->
+    <main>
+        <div class="container">
+            <section class="section1 clearfix">
+                <div class="textcenter">
+                    <span class="shtext">Packages</span>
+                    <span class="seperator"></span>
+                    <h1>Drop Us a Mail</h1>
+                </div>
+            </section>
+            <section class="packages">
+                <div class="card-container">
+                    <article class="card">
+                        <h1>CODE 8</h1>
+                        <img src="./images/logo.jpg" alt="Denim Jeans" style="width:100%">
+                        <h1>Tailored Jeans</h1>
+                        <p class="price">$19.99</p>
+                        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun
+                            denim
+                            lorem jeansum.</p>
+                        <p><button>Add to Cart</button></p>
+                    </article>
+                    <article class="card">
+                        <h1>CODE 10</h1>
+                        <img src="./images/logo.jpg" alt="Denim Jeans" style="width:100%">
+                        <h1>Tailored Jeans</h1>
+                        <p class="price">$19.99</p>
+                        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun
+                            denim
+                            lorem jeansum.</p>
+                        <p><button>Add to Cart</button></p>
+                    </article>
+                    <article class="card">
+                        <h1>CODE 14</h1>
+                        <img src="./images/logo.jpg" alt="Denim Jeans" style="width:100%">
+                        <h1>Tailored Jeans</h1>
+                        <p class="price">$19.99</p>
+                        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun
+                            denim
+                            lorem jeansum.</p>
+                        <p><button>Add to Cart</button></p>
+                    </article>
+                </div>
+            </section>
+            <!-- Add more articles for other packages -->
+            <section>
+                <h2>Driving Lesson Video</h2>
+                <video controls>
+                    <source src="driving_lesson.mp4" type="video/mp4">
+                    <track src="captions.vtt" kind="captions" label="English">
+                    Your browser does not support the video element.
+                </video>
+            </section>
+
+            <!-- Add the Natis booking link -->
+            <section>
+                <h2>Natis Booking</h2>
+                <p>For Natis booking, visit: <a href="https://www.example.com" class="external-link">Natis Booking</a>
+                </p>
+            </section>
+        </div>
+
     </main>
-    <aside>
-        <video controls>
-            <source src="driving_lesson.mp4" type="video/mp4">
-            <track src="captions.vtt" kind="captions" label="English">
-            Your browser does not support the video element.
-        </video>
-        <p>For Natis booking, visit: <a href="https://www.example.com" class="external-link">Natis Booking</a></p>
-    </aside>
+
     <footer>
         <p>Copyright © 2023 Brooklyn Driving School</p>
         <p>Phone: <a href="tel:(555)555-5555">&#9742; (555) 555-5555</a></p>
