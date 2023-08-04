@@ -57,7 +57,7 @@
             font-size: 22px;
         }
 
-        .card button {
+        .card h1 {
             border: none;
             outline: 0;
             padding: 12px;
@@ -93,6 +93,25 @@
             content: "\f08c";
             font-family: FontAwesome;
             margin-right: 5px;
+        }
+
+        video {
+            /* border: 5px groove rgb(89, 89, 96); */
+            padding: 30px;
+            width: auto;
+            height: 400px;
+        }
+
+        [controls] {
+            background: rgb(33, 31, 31);
+            color: rgb(34, 32, 32);
+        }
+
+        ::controls,
+        ::-controls,
+        ::-webkit-controls {
+            background: rgb(15, 12, 12);
+            color: rgb(12, 10, 10);
         }
 
         /* Mobile view adjustments */
@@ -131,55 +150,58 @@
                     <h1>Drop Us a Mail</h1>
                 </div>
             </section>
+            <!-- Add more articles for other packages -->
+
             <section class="packages">
                 <div class="card-container">
                     <article class="card">
                         <h1>CODE 8</h1>
                         <img src="./images/logo.jpg" alt="Denim Jeans" style="width:100%">
-                        <h1>Tailored Jeans</h1>
+                        <h2>Tailored Jeans</h2>
                         <p class="price">$19.99</p>
                         <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun
                             denim
                             lorem jeansum.</p>
-                        <p><button>Add to Cart</button></p>
                     </article>
                     <article class="card">
                         <h1>CODE 10</h1>
                         <img src="./images/logo.jpg" alt="Denim Jeans" style="width:100%">
-                        <h1>Tailored Jeans</h1>
+                        <h2>Tailored Jeans</h2>
                         <p class="price">$19.99</p>
                         <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun
                             denim
                             lorem jeansum.</p>
-                        <p><button>Add to Cart</button></p>
                     </article>
                     <article class="card">
                         <h1>CODE 14</h1>
                         <img src="./images/logo.jpg" alt="Denim Jeans" style="width:100%">
-                        <h1>Tailored Jeans</h1>
+                        <h2>Tailored Jeans</h2>
                         <p class="price">$19.99</p>
                         <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun
                             denim
                             lorem jeansum.</p>
-                        <p><button>Add to Cart</button></p>
                     </article>
                 </div>
             </section>
-            <!-- Add more articles for other packages -->
-            <section>
-                <h2>Driving Lesson Video</h2>
+            <!-- Video -->
+            <section class="section1 clearfix">
+                <div class="textcenter">
+                    <!-- <span class="shtext">Packages</span> -->
+                    <span class="seperator"></span>
+                    <h1>Driving Lesson Video</h1>
+                </div>
                 <video controls>
-                    <source src="driving_lesson.mp4" type="video/mp4">
+                    <source src="./video/video.mp4" type="video/mp4">
+                    <!-- Add the track element for captions -->
                     <track src="captions.vtt" kind="captions" label="English">
                     Your browser does not support the video element.
                 </video>
             </section>
-
+        
             <!-- Add the Natis booking link -->
             <section>
                 <h2>Natis Booking</h2>
-                <p>For Natis booking, visit: <a href="https://www.example.com" class="external-link">Natis Booking</a>
-                </p>
+                <p>For Natis booking, visit: <a href="https://www.example.com" class="external-link">Natis Booking</a></p>
             </section>
         </div>
 
